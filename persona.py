@@ -1,4 +1,4 @@
-# persona.py
+
 """
 Persona for the voice interview bot — first-person voice for Danish Akhtar.
 Use this to prime the LLM so responses sound like Danish.
@@ -59,7 +59,6 @@ PERSONAL_VOICE = {
 }
 
 # A function to return a short persona blurb suitable for LLM prompts:
-# ...existing code...
 
 def persona_blurb(short: bool = True) -> str:
     experience_lines = []
