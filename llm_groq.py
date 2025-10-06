@@ -1,16 +1,15 @@
-# llm_groq.py
+
 import os
 from groq import Groq
 from dotenv import load_dotenv
 load_dotenv()
 
-# Load key from env
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 if not GROQ_API_KEY:
     raise RuntimeError("Missing GROQ_API_KEY. Please set it in your .env file.")
 
-# Init client
+
 client = Groq(api_key=GROQ_API_KEY)
 
 def groq_generate(prompt: str, model: str = "openai/gpt-oss-120b") -> str:
